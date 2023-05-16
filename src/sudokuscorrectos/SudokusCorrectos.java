@@ -81,6 +81,16 @@ public class SudokusCorrectos {
         }
 
     }
+    
+    /**
+     * Compueba si la fila del sudoku es una fila correcta. 
+     * Una fila es correcta cuando su longitud es de 9 números son números positivos que no se repiten.
+     * 
+     * @param filaSudoku un array que representa una fila de un sudoku
+     * @return true si el array es válido, false en caso contrario
+     * @throws NullPointerException si el array que recibe es un array nulo
+     * @throws IllegalArgumentException si la longitud del array es distinta de 9
+     */
 
     public static boolean esFilaSudokuCorrecta(int[] filaSudoku) throws NullPointerException {
         boolean filaValida = true;
@@ -110,6 +120,14 @@ public class SudokusCorrectos {
 
     }
     
+    /**
+     * Extrae de una matriz la columna que le pasemos como parámetro
+     * @param matriz la matriz de la cula queremos extraer la columna
+     * @param numColumna la columna que queremos extraer de la matriz
+     * @return el array que representa la columna de la matriz.
+     * @throws NullPointerException 
+     */
+
     public static int[] extraerColumnaDeMatriz(int[][] matriz, int numColumna) throws NullPointerException {
         int array[];
         array = new int[matriz.length];
@@ -131,6 +149,14 @@ public class SudokusCorrectos {
         return array;
     }
     
+    /**
+     * Comprueba si la matriz que representa un aregión de un sudoku es válida o no.
+     * @param region la region del sudoku a comprobar si es válida
+     * @return true si la matriz es válida, false en caso contrario
+     * @throws NullPointerException si el array que recibe es un array nulo
+     * @throws IllegalArgumentException si la longitud de alguna fila de la matriz es distinta de 3
+     */
+
     public static boolean esRegionSudokuCorrecta(int[][] region) throws NullPointerException {
         boolean regionValida = true;
         int array[];
